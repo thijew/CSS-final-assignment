@@ -1,0 +1,24 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	display: grid;
+	grid-template-columns: repeat(auto, 1fr);
+}
+
+/* body */
+section:nth-of-type(1) {
+}
+
+/* clothes */
+section:nth-of-type(2) {
+}
+
+/* preview  */
+section:nth-of-type(3) {
+	width: 50lvw;
+	height: 100lvh;
+	grid-area: 1 / 2 / 4 / 4;
+}
