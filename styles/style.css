@@ -1,3 +1,37 @@
+:root {
+	--color-skin-1: #d5a985;
+	--color-skin-2: #bb8f6a;
+	--color-skin-3: #a47f5d;
+	--color-skin-4: #9e7a49;
+	--color-skin-5: #836e42;
+	--color-skin-6: #79582a;
+	--color-skin-7: #644e24;
+	--color-skin-8: #4c3d09;
+	--color-skin-9: #007f00;
+	--color-skin-10: #0f0f0f;
+	--color-skin-11: #ffffff;
+	--color-skin-12: #05989f;
+	--color-skin-13: #6441a4;
+}
+
+@supports (color: color(display-p3 1 1 1)) {
+	:root {
+		--color-skin-1: color(display-p3 0.835 0.663 0.522);
+		--color-skin-2: color(display-p3 0.733 0.561 0.416);
+		--color-skin-3: color(display-p3 0.643 0.498 0.365);
+		--color-skin-4: color(display-p3 0.62 0.478 0.29);
+		--color-skin-5: color(display-p3 0.514 0.431 0.259);
+		--color-skin-6: color(display-p3 0.475 0.345 0.165);
+		--color-skin-7: color(display-p3 0.392 0.306 0.141);
+		--color-skin-8: color(display-p3 0.298 0.239 0.035);
+		--color-skin-9: color(display-p3 0 0.498 0);
+		--color-skin-10: color(display-p3 0.059 0.059 0.059);
+		--color-skin-11: color(display-p3 1 1 1);
+		--color-skin-12: color(display-p3 0.02 0.596 0.624);
+		--color-skin-13: color(display-p3 0.392 0.255 0.643);
+	}
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -6,6 +40,11 @@
 body {
 	display: grid;
 	grid-template-columns: repeat(auto, 1fr);
+	gap: 2.5rem;
+}
+
+li {
+	list-style: none;
 }
 
 /* body */
@@ -16,9 +55,34 @@ section:nth-of-type(1) {
 section:nth-of-type(2) {
 }
 
-/* preview  */
+/* preview */
 section:nth-of-type(3) {
-	width: 50lvw;
-	height: 100lvh;
-	grid-area: 1 / 2 / 4 / 4;
+	display: grid;
+	place-items: center;
+	position: relative;
+}
+
+section:nth-of-type(3) img {
+	display: block;
+	max-height: 50lvh;
+}
+
+/* Circle under the knight */
+section:nth-of-type(3) li {
+	position: relative;
+	display: grid;
+	place-items: center;
+}
+
+/* https://cssanimation.rocks/spheres/ */
+section:nth-of-type(3) li::after {
+	content: "";
+	position: absolute;
+	bottom: 0.2rem;
+	width: 7rem;
+	height: 1.5rem;
+	background-color: rgba(0, 0, 0, 0.3);
+	border-radius: 50%;
+	z-index: -1;
+	filter: blur(3px);
 }

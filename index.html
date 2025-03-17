@@ -9,6 +9,7 @@
 </head>
 
 <body>
+
     <!-- lichaam -->
     <section>
         <ul>
@@ -17,64 +18,94 @@
                 <input type="text" id="name">
             </li>
             <li>
-                <!-- OSRS pngs gebruiken -->
+                <label>Gender</label>
+                <input type="radio" id="gender-male" name="gender" value="male">
+                <label for="gender-male">Male</label>
+                <input type="radio" id="gender-female" name="gender" value="female">
+                <label for="gender-female">Female</label>
+            </li>
+    </section>
+    <!-- <li>
                 <label>Skin colour</label>
+                <input type="color" id="skin-">
                 <button>▼</button>
             </li>
             <li>
                 <label>Hairstyle</label>
+                <input type="image" id="hair">
                 <button>▼</button>
             </li>
             <li>
-                <label>hair color</label>
+                <label>Hair color</label>
+                <input type="color" id="haircolor">
                 <button>▼</button>
             </li>
             <li>
                 <label>Facial hair</label>
-                <button>▼</button>
-            </li>
-            <li>
-                <label>Facial hair color</label>
+                <input type="image" id="facialhair">
                 <button>▼</button>
             </li>
         </ul>
-    </section>
+    </section> -->
 
     <!-- kleding -->
     <section>
         <ul>
-            <li>
-                <label>Head</label>
-                <button>▼</button>
-            </li>
+            <div class="dropdown">
+                <input type="checkbox" id="dropdown-toggle" hidden>
+                <label for="dropdown-toggle" class="dropdown-label">Choose Helmet ▼</label>
+                <ul class="dropdown-menu">
+                    <li>
+                        <input type="radio" id="helm-addy" name="helmet" hidden>
+                        <label for="helm-addy">
+                            <img src="/imgs/helm/helm-equiped-addy.png" alt="Addy Helmet"> Addy Helm
+                        </label>
+                    </li>
+                    <li>
+                        <input type="radio" id="helm-rune" name="helmet" hidden>
+                        <label for="helm-rune">
+                            <img src="/imgs/helm/helm-equiped-rune.png" alt="Rune Helm"> Rune Helm
+                        </label>
+                    </li>
+                    <li>
+                        <input type="radio" id="helm-dragon" name="helmet" hidden>
+                        <label for="helm-dragon">
+                            <img src="/imgs/helm/helm-equiped-dragon.png" alt="Dragon Helm"> Dragon Helm
+                        </label>
+                    </li>
+                </ul>
+            </div>
+
+
             <li>
                 <label>Body</label>
+                <input type="radio" id="body">
                 <button>▼</button>
             </li>
             <li>
                 <label>Legs</label>
+                <input type="radio" id="legs">
                 <button>▼</button>
             </li>
             <li>
                 <label>Boots</label>
+                <input type="radio" id="boots">
                 <button>▼</button>
             </li>
-            <li>
+            <!-- <li>
                 <label>Sword</label>
+                <input type="radio" id="sword">
                 <button>▼</button>
-            </li>
-            <li>
-                <label>Shield</label>
-                <button>▼</button>
-            </li>
+            </li> -->
         </ul>
     </section>
 
     <!-- preview the knight -->
     <section>
-
+        <ul>
+            <li><img src="/imgs/Plain_clothing_(male).png" alt="knight"></li>
+        </ul>
     </section>
-
 
 </body>
 
