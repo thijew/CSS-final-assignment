@@ -47,35 +47,28 @@ li {
 	list-style: none;
 }
 
-/* body */
-section:nth-of-type(1) {
-}
-
-/* clothes */
-section:nth-of-type(2) {
-}
-
 /* preview */
-section:nth-of-type(3) {
+section:nth-of-type(1) {
 	display: grid;
 	place-items: center;
 	position: relative;
 }
 
-section:nth-of-type(3) img {
+section:nth-of-type(1) img {
 	display: block;
 	max-height: 50lvh;
 }
 
 /* Circle under the knight */
-section:nth-of-type(3) li {
+section:nth-of-type(1) li {
 	position: relative;
 	display: grid;
 	place-items: center;
 }
 
+/* circle under the knight */
 /* https://cssanimation.rocks/spheres/ */
-section:nth-of-type(3) li::after {
+section:nth-of-type(1) li::after {
 	content: "";
 	position: absolute;
 	bottom: 0.2rem;
@@ -85,4 +78,57 @@ section:nth-of-type(3) li::after {
 	border-radius: 50%;
 	z-index: -1;
 	filter: blur(3px);
+}
+
+/* Helmet dropdown toggle visibility */
+fieldset:nth-of-type(2) input[type="checkbox"] {
+	position: absolute;
+	opacity: 0;
+}
+
+fieldset:nth-of-type(2)input[type="checkbox"] + label {
+	cursor: pointer;
+	padding: 6px 12px;
+	background-color: #222;
+	color: white;
+	border-radius: 5px;
+}
+
+/* Dropdown hidden by default */
+fieldset:nth-of-type(2) input[type="checkbox"] + label + ul {
+	display: none;
+	position: absolute;
+	background-color: #333;
+	padding: 10px;
+	margin-top: 4px;
+	border-radius: 8px;
+	list-style: none;
+}
+
+/* Show dropdown when checked */
+fieldset:nth-of-type(2) input[type="checkbox"]:checked + label + ul {
+	display: flex;
+	flex-direction: column;
+}
+
+/* Helmet options styling */
+fieldset:nth-of-type(2) input[type="radio"] + label {
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	gap: 8px;
+	color: white;
+	padding: 4px;
+	border-radius: 5px;
+}
+
+/* Image size control */
+fieldset:nth-of-type(2) input[type="radio"] + label img {
+	width: 40px;
+}
+
+/* Highlight selected helmet */
+fieldset:nth-of-type(2) input[type="radio"]:checked + label {
+	outline: 2px solid #c7a154;
+	border-radius: 5px;
 }
