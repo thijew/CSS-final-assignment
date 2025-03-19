@@ -15,3 +15,4 @@ https://www.w3schools.com/html/html_form_input_types.asp
 https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotate3d
 https://cssanimation.rocks/spheres/
 https://www.youtube.com/watch?v=S-VeYcOCFZw
+https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_details_css En hulp van Niels
