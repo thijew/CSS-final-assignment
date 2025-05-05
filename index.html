@@ -10,47 +10,6 @@
 
 <body>
 
-    <form>
-        <!-- lichaam -->
-        <fieldset>
-            <ul>
-                <li>
-                    <label for="name">Name your knight</label>
-                    <input type="text" id="name">
-                </li>
-                <li>
-                    <label>Gender</label>
-                    <input type="radio" id="gender-male" name="gender" value="male">
-                    <label for="gender-male">Male</label>
-                    <input type="radio" id="gender-female" name="gender" value="female">
-                    <label for="gender-female">Female</label>
-                </li>
-            </ul>
-        </fieldset>
-    </form>
-    <!-- <li>
-                <label>Skin colour</label>
-                <input type="color" id="skin-">
-                <button>▼</button>
-            </li>
-            <li>
-                <label>Hairstyle</label>
-                <input type="image" id="hair">
-                <button>▼</button>
-            </li>
-            <li>
-                <label>Hair color</label>
-                <input type="color" id="haircolor">
-                <button>▼</button>
-            </li>
-            <li>
-                <label>Facial hair</label>
-                <input type="image" id="facialhair">
-                <button>▼</button>
-            </li>
-        </ul>
-    </section> -->
-
     <!-- Niels helped me out with this -->
     <!-- kleding -->
     <form>
@@ -79,9 +38,9 @@
                 </li>
             </ul>
         </details>
-    </form>
-    <!-- body -->
-    <form>
+
+        <!-- body -->
+
         <details>
             <summary>Platebody</summary>
             <ul>
@@ -92,7 +51,7 @@
                     </label>
                 </li>
                 <li>
-                    <input type="radio" name="body" id="body-addy" hidden>
+                    <input type="radio" name="body" id="body-rune" hidden>
                     <label for="body-rune">
                         <img src="/imgs/body/body-rune.png" alt="Rune Platebody"> Rune Platebody
                     </label>
@@ -105,9 +64,9 @@
                 </li>
             </ul>
         </details>
-    </form>
-    <!-- legs -->
-    <form>
+
+        <!-- legs -->
+
         <details>
             <summary>Legs</summary>
             <ul>
@@ -131,9 +90,9 @@
                 </li>
             </ul>
         </details>
-    </form>
-    <!-- boots -->
-    <form>
+
+        <!-- boots -->
+
         <details>
             <summary>Boots</summary>
             <ul>
@@ -155,21 +114,26 @@
                         <img src="/imgs/boots/boot-dragon.png" alt="Dragon boots"> Dragon boots
                     </label>
                 </li>
-                <!-- <li>
-                <label>Sword</label>
-                <input type="radio" id="sword">
-                <button>▼</button>
-            </li> -->
             </ul>
         </details>
     </form>
 
     <!-- preview the knight -->
-    <section>
+    <section id="character">
         <ul>
-            <li><img src="/imgs/Plain_clothing_(male).png" alt="knight"></li>
+            <li><img src="/imgs/Plain_clothing_(male).png" alt="Knight" id="base"></li>
+            <li>
+                <div id="helm-addy-preview"></div>
+            </li>
+            <li>
+                <div id="helm-rune-preview"></div>
+            </li>
+            <li>
+                <div id="helm-dragon-preview"></div>
+            </li>
         </ul>
     </section>
+
 
 </body>
 

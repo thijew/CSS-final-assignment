@@ -1,34 +1,13 @@
 :root {
 	--color-skin-1: #d5a985;
 	--color-skin-2: #bb8f6a;
-	--color-skin-3: #a47f5d;
-	--color-skin-4: #9e7a49;
-	--color-skin-5: #836e42;
-	--color-skin-6: #79582a;
-	--color-skin-7: #644e24;
-	--color-skin-8: #4c3d09;
-	--color-skin-9: #007f00;
-	--color-skin-10: #0f0f0f;
-	--color-skin-11: #ffffff;
-	--color-skin-12: #05989f;
-	--color-skin-13: #6441a4;
+
 }
 
 @supports (color: color(display-p3 1 1 1)) {
 	:root {
 		--color-skin-1: color(display-p3 0.835 0.663 0.522);
 		--color-skin-2: color(display-p3 0.733 0.561 0.416);
-		--color-skin-3: color(display-p3 0.643 0.498 0.365);
-		--color-skin-4: color(display-p3 0.62 0.478 0.29);
-		--color-skin-5: color(display-p3 0.514 0.431 0.259);
-		--color-skin-6: color(display-p3 0.475 0.345 0.165);
-		--color-skin-7: color(display-p3 0.392 0.306 0.141);
-		--color-skin-8: color(display-p3 0.298 0.239 0.035);
-		--color-skin-9: color(display-p3 0 0.498 0);
-		--color-skin-10: color(display-p3 0.059 0.059 0.059);
-		--color-skin-11: color(display-p3 1 1 1);
-		--color-skin-12: color(display-p3 0.02 0.596 0.624);
-		--color-skin-13: color(display-p3 0.392 0.255 0.643);
 	}
 }
 
@@ -40,14 +19,18 @@
 body {
 	display: grid;
 	grid-template-columns: repeat(auto, 1fr);
-	gap: 2.5rem;
+	gap: .5rem;
 }
 
 li {
 	list-style: none;
 }
 
-/* preview */
+ form img {
+	height: 50px;
+}
+
+/* preview knight */
 section:nth-of-type(1) {
 	display: grid;
 	place-items: center;
@@ -81,12 +64,12 @@ section:nth-of-type(1) li::after {
 }
 
 /* Helmet dropdown toggle visibility */
-fieldset:nth-of-type(2) input[type="checkbox"] {
+form input[type="checkbox"] {
 	position: absolute;
 	opacity: 0;
 }
 
-fieldset:nth-of-type(2)input[type="checkbox"] + label {
+form input[type="checkbox"] + label {
 	cursor: pointer;
 	padding: 6px 12px;
 	background-color: #222;
@@ -95,7 +78,7 @@ fieldset:nth-of-type(2)input[type="checkbox"] + label {
 }
 
 /* Dropdown hidden by default */
-fieldset:nth-of-type(2) input[type="checkbox"] + label + ul {
+form input[type="checkbox"] + label + ul {
 	display: none;
 	position: absolute;
 	background-color: #333;
@@ -106,13 +89,13 @@ fieldset:nth-of-type(2) input[type="checkbox"] + label + ul {
 }
 
 /* Show dropdown when checked */
-fieldset:nth-of-type(2) input[type="checkbox"]:checked + label + ul {
+form input[type="checkbox"]:checked + label + ul {
 	display: flex;
 	flex-direction: column;
 }
 
 /* Helmet options styling */
-fieldset:nth-of-type(2) input[type="radio"] + label {
+form input[type="radio"] + label {
 	display: flex;
 	align-items: center;
 	cursor: pointer;
@@ -123,12 +106,13 @@ fieldset:nth-of-type(2) input[type="radio"] + label {
 }
 
 /* Image size control */
-fieldset:nth-of-type(2) input[type="radio"] + label img {
-	width: 40px;
+ input[type="radio"] + label img {
+	height: 50px;
 }
 
 /* Highlight selected helmet */
-fieldset:nth-of-type(2) input[type="radio"]:checked + label {
+ input[type="radio"]:checked + label {
 	outline: 2px solid #c7a154;
 	border-radius: 5px;
 }
+
