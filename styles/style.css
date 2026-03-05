@@ -186,3 +186,5 @@ body:has(#legs-dragon:checked) #legs-dragon-preview { display: block; }
 body:has(#boots-addy:checked)   #boots-addy-preview   { display: block; }
 body:has(#boots-rune:checked)   #boots-rune-preview   { display: block; }
 body:has(#boots-dragon:checked) #boots-dragon-preview { display: block; }
+
+/* test */
