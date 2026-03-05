@@ -10,14 +10,16 @@
 
 <body>
 
-    <!-- Niels helped me out with this -->
-    <!-- kleding -->
     <form>
         <legend>Equipment</legend>
-        <!-- helmet -->
+
         <details>
             <summary>Helmet</summary>
             <ul>
+                <li>
+                    <input type="radio" name="helmet" id="helm-none" hidden checked>
+                    <label for="helm-none">No Helmet</label>
+                </li>
                 <li>
                     <input type="radio" name="helmet" id="helm-addy" hidden>
                     <label for="helm-addy">
@@ -39,11 +41,13 @@
             </ul>
         </details>
 
-        <!-- body -->
-
         <details>
             <summary>Platebody</summary>
             <ul>
+                <li>
+                    <input type="radio" name="body" id="body-none" hidden checked>
+                    <label for="body-none">No Body</label>
+                </li>
                 <li>
                     <input type="radio" name="body" id="body-addy" hidden>
                     <label for="body-addy">
@@ -65,11 +69,13 @@
             </ul>
         </details>
 
-        <!-- legs -->
-
         <details>
             <summary>Legs</summary>
             <ul>
+                <li>
+                    <input type="radio" name="legs" id="legs-none" hidden checked>
+                    <label for="legs-none">No Legs</label>
+                </li>
                 <li>
                     <input type="radio" name="legs" id="legs-addy" hidden>
                     <label for="legs-addy">
@@ -91,49 +97,65 @@
             </ul>
         </details>
 
-        <!-- boots -->
-
         <details>
             <summary>Boots</summary>
             <ul>
                 <li>
+                    <input type="radio" name="boots" id="boots-none" hidden checked>
+                    <label for="boots-none">No Boots</label>
+                </li>
+                <li>
                     <input type="radio" name="boots" id="boots-addy" hidden>
                     <label for="boots-addy">
-                        <img src="/imgs/boots/boot-addy.png" alt="Adamant boots"> Adamant boots
+                        <img src="/imgs/boots/boot-addy.png" alt="Adamant boots"> Adamant Boots
                     </label>
                 </li>
                 <li>
                     <input type="radio" name="boots" id="boots-rune" hidden>
                     <label for="boots-rune">
-                        <img src="/imgs/boots/boot-rune.png" alt="Rune boots"> Rune boots
+                        <img src="/imgs/boots/boot-rune.png" alt="Rune boots"> Rune Boots
                     </label>
                 </li>
                 <li>
                     <input type="radio" name="boots" id="boots-dragon" hidden>
                     <label for="boots-dragon">
-                        <img src="/imgs/boots/boot-dragon.png" alt="Dragon boots"> Dragon boots
+                        <img src="/imgs/boots/boot-dragon.png" alt="Dragon boots"> Dragon Boots
                     </label>
                 </li>
             </ul>
         </details>
     </form>
 
-    <!-- preview the knight -->
     <section id="character">
-        <ul>
-            <li><img src="/imgs/Plain_clothing_(male).png" alt="Knight" id="base"></li>
-            <li>
-                <div id="helm-addy-preview"></div>
-            </li>
-            <li>
-                <div id="helm-rune-preview"></div>
-            </li>
-            <li>
-                <div id="helm-dragon-preview"></div>
-            </li>
-        </ul>
-    </section>
+        <!-- Base character layer -->
+        <div class="character-wrap">
+            <img src="/imgs/Plain_clothing_(male).png" alt="Knight base" id="base">
 
+            <!-- Helmet layers -->
+            <img src="/imgs/helm/helm-equiped-addy.png" id="helm-addy-preview" class="helm-layer" alt="">
+            <img src="/imgs/helm/helm-equiped-rune.png" id="helm-rune-preview" class="helm-layer" alt="">
+            <img src="/imgs/helm/helm-equiped-dragon.png" id="helm-dragon-preview" class="helm-layer" alt="">
+
+            <!-- Body layers -->
+            <img src="/imgs/body/body-equiped-addy.png" id="body-addy-preview" class="body-layer" alt="">
+            <img src="/imgs/body/body-rune-equiped.png" id="body-rune-preview" class="body-layer" alt="">
+            <img src="/imgs/body/body-dragon-equiped.png" id="body-dragon-preview" class="body-layer" alt="">
+
+            <!-- Legs layers -->
+            <img src="/imgs/legs/legs-equiped-addy.png" id="legs-addy-preview" class="legs-layer" alt="">
+            <img src="/imgs/legs/legs-equped-rune.png" id="legs-rune-preview" class="legs-layer" alt="">
+            <img src="/imgs/legs/legs-equped-dragon.png" id="legs-dragon-preview" class="legs-layer" alt="">
+
+            <!-- Boots layers -->
+            <img src="/imgs/boots/boot-equiped-addy.png" id="boots-addy-preview" class="boots-layer" alt="">
+
+            <img src="/imgs/boots/boot-equiped-rune.png" id="boots-rune-preview" class="boots-layer" alt="">
+            <img src="/imgs/boots/boot-equiped-dragon.png" id="boots-dragon-preview" class="boots-layer" alt="">
+
+            <!-- Shadow -->
+            <div class="shadow"></div>
+        </div>
+    </section>
 
 </body>
 
