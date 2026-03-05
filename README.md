@@ -1,12 +1,6 @@
 # CSS-final-assignment
 
-de opdracht die ik gekozen hebt
-
-de css waarmee ik aan de slag wql / experimenteren
-
-experimenteren sowieso laten staan al lukken ze niet!
-
-elke week maak je verslagje waarin je vertelt waaraan je hebt gewerkt wat is gelukt/ wat niet
+For my CSS project I chose the control panel assignment. I want to make a character where u can change his clothes and use different animations to display the clothes. I was thinking about a drag and drop, a randomize button, keyboard control and maybe more.
 
 #### Sources
 
